@@ -7,7 +7,7 @@ local meta = {
 }
 
 local bg = C("#161616")
-local fg = C("#f2f4f8")
+local fg = C("#F2FFFF")
 
 -- stylua: ignore
 local palette = {
@@ -18,7 +18,7 @@ local palette = {
   blue    = Shade.new("#78A9FF", 0.15, -0.15),
   magenta = Shade.new("#BE95FF", 0.15, -0.15),
   cyan    = Shade.new("#33B1FF", 0.15, -0.15),
-  white   = Shade.new("#dfdfe0", 0.15, -0.15),
+  white   = Shade.new("#F2FFFF", "#F2FFFF", "#F2FFFF"),
   orange  = Shade.new("#3DDBD9", 0.15, -0.15),
   pink    = Shade.new("#FF7EB6", 0.15, -0.15),
 
