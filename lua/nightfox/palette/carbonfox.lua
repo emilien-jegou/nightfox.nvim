@@ -6,7 +6,7 @@ local meta = {
   light = false,
 }
 
-local bg = C("#161616")
+local bg = C("#111111")
 local fg = C("#F2FFFF")
 
 -- stylua: ignore
