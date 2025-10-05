@@ -6,31 +6,34 @@ local meta = {
   light = true,
 }
 
+local bg = C("#fffbf7")
+local fg = C("#33234d")
+
 -- stylua: ignore
 local palette = {
-  black   = Shade.new("#352c24", 0.15, -0.15, true),
-  red     = Shade.new("#a5222f", 0.15, -0.15, true),
-  green   = Shade.new("#396847", 0.15, -0.15, true),
-  yellow  = Shade.new("#AC5402", 0.15, -0.15, true),
-  blue    = Shade.new("#2848a9", 0.15, -0.15, true),
-  magenta = Shade.new("#6e33ce", 0.15, -0.15, true),
-  cyan    = Shade.new("#287980", 0.15, -0.15, true),
+  black   = Shade.new("#2b241e", 0.15, -0.15, true),
+  red     = Shade.new("#961a26", 0.15, -0.15, true),
+  green   = Shade.new("#266338", 0.15, -0.15, true),
+  yellow  = Shade.new("#a65000", 0.15, -0.15, true),
+  blue    = Shade.new("#1f42ad", 0.15, -0.15, true),
+  magenta = Shade.new("#6028bd", 0.15, -0.15, true),
+  cyan    = Shade.new("#1b6970", 0.15, -0.15, true),
   white   = Shade.new("#f2e9e1", 0.15, -0.15, true),
-  orange  = Shade.new("#955f61", 0.15, -0.15, true),
-  pink    = Shade.new("#a440b5", 0.15, -0.15, true),
+  orange  = Shade.new("#8f3d40", 0.15, -0.15, true),
+  pink    = Shade.new("#ad3497", 0.15, -0.15, true),
 
-  comment = "#837a72",
+  comment = bg:blend(fg, 0.4):to_css(),
 
-  bg0     = "#e4dcd4", -- Dark bg (status line and float)
-  bg1     = "#f6f2ee", -- Default bg
-  bg2     = "#dbd1dd", -- Lighter bg (colorcolm folds)
-  bg3     = "#d3c7bb", -- Lighter bg (cursor line)
-  bg4     = "#aab0ad", -- Conceal, border fg
+  bg0     = bg:darken(-4):to_css(), -- Dark bg (status line and float)
+  bg1     = bg:to_css(), -- Default bg
+  bg2     = bg:darken(6):to_css(), -- Lighter bg (colorcolm folds)
+  bg3     = bg:darken(12):to_css(), -- Lighter bg (cursor line)
+  bg4     = bg:darken(24):to_css(), -- Conceal, border fg
 
-  fg0     = "#302b5d", -- Lighter fg
-  fg1     = "#3d2b5a", -- Default fg
-  fg2     = "#643f61", -- Darker fg (status line)
-  fg3     = "#824d5b", -- Darker fg (line numbers, fold colums)
+  fg0     = fg:brighten(6):to_css(), -- Lighter fg
+  fg1     = fg:to_css(), -- Default fg
+  fg2     = fg:brighten(-24):to_css(), -- Darker fg (status line)
+  fg3     = fg:brighten(-48):to_css(), -- Darker fg (line numbers, fold colums)
 
   sel0    = "#e7d2be", -- Popup bg, visual selection bg
   sel1    = "#a4c1c2", -- Popup sel bg, search bg
