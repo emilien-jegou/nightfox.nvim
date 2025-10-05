@@ -6,23 +6,23 @@ local meta = {
   light = false,
 }
 
-local bg = C("#161616")
-local fg = C("#F2FFFF")
+local bg = C("#0b0b0b")
+local fg = C("#F9FFFF")
 
 -- stylua: ignore
 local palette = {
   black   = Shade.new("#282828", 0.15, -0.15),
-  red     = Shade.new("#EE5396", 0.15, -0.15),
-  green   = Shade.new("#25be6a", 0.15, -0.15), -- #25be6a or #42BE65
+  red     = Shade.new("#ee5fe2", 0.15, -0.15),
+  green   = Shade.new("#ee91fa", 0.15, -0.15),
   yellow  = Shade.new("#08BDBA", 0.15, -0.15),
-  blue    = Shade.new("#78A9FF", 0.15, -0.15),
+  blue    = Shade.new("#8fb8ff", 0.15, -0.15),
   magenta = Shade.new("#BE95FF", 0.15, -0.15),
   cyan    = Shade.new("#33B1FF", 0.15, -0.15),
-  white   = Shade.new("#F2FFFF", "#F2FFFF", "#F2FFFF"),
+  white   = Shade.new("#F9FFFF", "#F9FFFF", "#F9FFFF"),
   orange  = Shade.new("#3DDBD9", 0.15, -0.15),
   pink    = Shade.new("#FF7EB6", 0.15, -0.15),
 
-  comment = bg:blend(fg, 0.4):to_css(),
+  comment = bg:blend(fg, 0.35):to_css(),
 
   bg0     = bg:brighten(-4):to_css(), -- Dark bg (status line and float)
   bg1     = bg:to_css(), -- Default bg
@@ -85,11 +85,11 @@ local function generate_spec(pal)
   }
 
   spec.diag = {
-    error = pal.red.base,
-    warn  = pal.magenta.base,
-    info  = pal.blue.base,
-    hint  = pal.orange.base,
-    ok    = pal.green.base,
+    error = "#ee5f60",
+    warn  = "#eeb847",
+    info  = "#47eeb5",
+    hint  = "#47eeb5",
+    ok    = "#95dc55",
   }
 
   spec.diag_bg = {
@@ -101,8 +101,8 @@ local function generate_spec(pal)
   }
 
   spec.diff = {
-    add    = C(spec.bg1):blend(C(pal.green.dim), 0.15):to_css(),
-    delete = C(spec.bg1):blend(C(pal.red.dim), 0.15):to_css(),
+    add    = C(spec.bg1):blend(C("#95dc55"), 0.15):to_css(),
+    delete = C(spec.bg1):blend(C("#ee5f60"), 0.15):to_css(),
     change = C(spec.bg1):blend(C(pal.blue.dim), 0.15):to_css(),
     text   = C(spec.bg1):blend(C(pal.cyan.dim), 0.3):to_css(),
   }

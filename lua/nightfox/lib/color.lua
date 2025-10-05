@@ -271,6 +271,13 @@ function Color:brighten(v)
   return Color.from_hsv(hsv.hue, hsv.saturation, value)
 end
 
+---Returns a darker version of the color.
+---@param v number Value. Float [-100,100].
+---@return Color
+function Color:darken(v)
+  return self:brighten(-v)
+end
+
 ---Adds value of `v` to the `lightness` of the current color. This returns
 ---either a lighter version if +v and darker if -v.
 ---@param v number Lightness. Float [-100,100].
