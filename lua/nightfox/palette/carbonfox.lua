@@ -13,14 +13,14 @@ local fg = C("#F9FFFF")
 local palette = {
   black   = Shade.new("#282828", 0.15, -0.15),
   red     = Shade.new("#ee5fe2", 0.15, -0.15),
-  green   = Shade.new("#ee91fa", 0.15, -0.15),
+  green   = Shade.new("#81b83b", 0.15, -0.15),
   yellow  = Shade.new("#08BDBA", 0.15, -0.15),
   blue    = Shade.new("#8fb8ff", 0.15, -0.15),
   magenta = Shade.new("#BE95FF", 0.15, -0.15),
   cyan    = Shade.new("#33B1FF", 0.15, -0.15),
   white   = Shade.new("#F9FFFF", "#F9FFFF", "#F9FFFF"),
   orange  = Shade.new("#3DDBD9", 0.15, -0.15),
-  pink    = Shade.new("#FF7EB6", 0.15, -0.15),
+  pink    = Shade.new("#ff824f", 0.15, -0.15),
 
   comment = bg:blend(fg, 0.35):to_css(),
 
